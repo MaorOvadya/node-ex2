@@ -60,7 +60,7 @@ server.on("request", (req, res) => {
     req.on("end", () => {
       const parseBody = Buffer.concat(body).toString();
       const message = parseBody.split("=")[1].split("+").join(" ");
-      fs.writeFile("sample.txt", message, (err) => {
+      fs.writeFile("test.txt", message, (err) => {
         if (err) throw err;
         res.statusCode = 302;
         res.setHeader("Location", "/");
