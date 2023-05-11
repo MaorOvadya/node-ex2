@@ -3,16 +3,14 @@ const server = http.createServer();
 const fs = require("fs");
 const path = require("path");
 
-// console.log(server)
-
 server.on("request", (req, res) => {
   if (req.url === "/") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/html");
     res.write(`
                 <h1>Hello Node</h1>
-                <a href="http://localhost:8000/read-message">Read Message</a>
-                <a href="http://localhost:8000/write-message">Write Message</a>
+                <a href="http://localhost:8000/read-message">Read Me hahahaha</a>
+                <a href="http://localhost:8000/write-message">Write Me Hahahaha</a>
             `);
     res.end();
   }
